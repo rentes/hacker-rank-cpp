@@ -4,7 +4,10 @@
 
 #ifndef HACKER_RANK_CPP_INPUT_OUTPUT_H
 #define HACKER_RANK_CPP_INPUT_OUTPUT_H
-
-
-
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
 #endif //HACKER_RANK_CPP_INPUT_OUTPUT_H
