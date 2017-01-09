@@ -9,5 +9,6 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <stdlib.h>
 using namespace std;
 #endif //HACKER_RANK_CPP_INPUT_OUTPUT_H

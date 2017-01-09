@@ -3,6 +3,6 @@ project(hacker_rank_cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES introduction/input_output.cpp)
+set(SOURCE_FILES introduction/basic_data_types.cpp)
 
 add_executable(hacker_rank_cpp ${SOURCE_FILES})
