@@ -13,7 +13,7 @@ int main(void) {
     vector<string> array_indexes;
     vector<string> queries; // vector to hold the queries
 
-    if ( cin.peek() == '\n' )
+    if (cin.peek() == '\n')
         cin.ignore();
 
     for (int i = 0; i < n; i++) {
