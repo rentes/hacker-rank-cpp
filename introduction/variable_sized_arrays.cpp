@@ -9,8 +9,8 @@ int main(void) {
     cin >> n >> q;
     string line;
 
-    unsigned int* array[n]; // array with n pointers to the other arrays
-    vector<string> array_indexes;
+    unsigned int* array[n]; // array with n pointers to the array indexes
+    vector<string> array_indexes; // vector to hold the array indexes
     vector<string> queries; // vector to hold the queries
 
     if (cin.peek() == '\n')
