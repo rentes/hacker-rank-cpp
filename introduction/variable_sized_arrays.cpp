@@ -4,41 +4,39 @@
 
 #include "introduction.h"
 
+using namespace std;
+
 int main(void) {
     unsigned int n, q;
-    cin >> n >> q;
     string line;
 
-    unsigned int* array[n]; // array with n pointers to the array indexes
-    vector<string> array_indexes; // vector to hold the array indexes
-    vector<string> queries; // vector to hold the queries
+    getline(cin, line);
+    n = (unsigned int) stoi(line.substr(0, 1));
+    q = (unsigned int) stoi(line.substr(2, 1));
 
-    if (cin.peek() == '\n')
-        cin.ignore();
+    unsigned int* array[n]; // array with n pointers to the array indexes
+    unsigned int queries[n*q]; // array with all queries
 
     for (int i = 0; i < n; i++) {
         std::getline(cin, line);
-        istringstream iss(line);
-        copy(istream_iterator<string>(iss),
-             istream_iterator<string>(),
-             back_inserter(array_indexes));
+
+        unsigned int index_size = (unsigned int) stoi(line.substr(0, 1));
+        unsigned int array_indexes[index_size];
+
+        for (int j = 0; j < index_size; j++) {
+            array_indexes[j] = (unsigned int) stoi(line.substr(2*(j+1), 1));
+        }
+        array[i] = array_indexes;
     }
 
     for (int i = 0; i < q; i++) {
         std::getline(cin, line);
-        istringstream iss(line);
-        copy(istream_iterator<string>(iss),
-             istream_iterator<string>(),
-             back_inserter(queries));
+        queries[2*i] = (unsigned int) stoi(line.substr(0, 1));
+        queries[2*i+1] = (unsigned int) stoi(line.substr(2, 1));
     }
 
-    cout << "indexes: " << endl;
-    for (std::vector<string>::const_iterator i = array_indexes.begin(); i != array_indexes.end(); ++i) {
-        cout << *i << endl;
-    }
-    cout << "queries: " << endl;
-    for (std::vector<string>::const_iterator i = queries.begin(); i != queries.end(); ++i) {
-        cout << *i << endl;
+    for (int i = 0; i < q; i++) {
+        cout << array[queries[2*i]][queries[2*i+1]];
     }
 
     return EXIT_SUCCESS;
