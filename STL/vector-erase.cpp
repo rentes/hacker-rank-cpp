@@ -16,8 +16,8 @@ int main(void) {
 
     cin >> element_to_erase;
     cin >> element_to_erase_range_a >> element_to_erase_range_b;
-    elements.erase(elements.begin() + element_to_erase-1);
-    elements.erase(elements.begin() + element_to_erase_range_a-1, elements.begin() + element_to_erase_range_b-1);
+    elements.erase(elements.begin() + element_to_erase - 1);
+    elements.erase(elements.begin() + element_to_erase_range_a - 1, elements.begin() + element_to_erase_range_b - 1);
 
     cout << elements.size() << endl;
     for(int i = 0; i < elements.size(); i++) {
