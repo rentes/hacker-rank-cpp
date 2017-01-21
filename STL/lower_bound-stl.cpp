@@ -21,11 +21,10 @@ int main(void) {
     std::vector<unsigned int>::iterator low;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
-        for (int j = 0; j < number_elements; j++) {
+        for (int j = 0; j < number_elements && !present; j++) {
             if (elements.at(j) == element) {
                 present = true;
                 index = j;
-                break;
             } else {
                 low = lower_bound(elements.begin(), elements.end(), element);
             }
