@@ -25,13 +25,12 @@ int main(void) {
             if (elements.at(j) == element) {
                 present = true;
                 index = j;
-            } else {
-                low = lower_bound(elements.begin(), elements.end(), element);
             }
         }
         if (present) {
             cout << "Yes " << index+1 << endl;
         } else {
+            low = lower_bound(elements.begin(), elements.end(), element);
             cout << "No " << low - elements.begin()+1 << endl;
         }
         present = false;
