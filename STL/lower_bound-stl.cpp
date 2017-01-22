@@ -8,7 +8,6 @@ int main(void) {
     unsigned int number_elements;
     unsigned int number_queries;
     unsigned int element;
-    bool present = false;
     cin >> number_elements;
     vector <unsigned int> elements;
     for (int i = 0; i < number_elements; i++) {
@@ -17,21 +16,17 @@ int main(void) {
         }
     }
     cin >> number_queries;
-    std::vector<unsigned int>::iterator low;
+    std::vector<unsigned int>::iterator it;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
-        for (int j = 0; j < number_elements; j++) {
-            if (elements.at(j) == element) {
-                present = true;
-                cout << "Yes " << j+1 << endl;
-                break;
-            }
+        it = find(elements.begin(), elements.end(), element);
+        if (it != elements.end() || *it == element) {
+            cout << "Yes " << it - elements.begin() + 1 << endl;
         }
-        if (!present) {
-            low = lower_bound(elements.begin(), elements.end(), element);
-            cout << "No " << low - elements.begin()+1 << endl;
+        else {
+            it = lower_bound(elements.begin(), elements.end(), element);
+            cout << "No " << it - elements.begin() + 1 << endl;
         }
-        present = false;
     }
 
     return EXIT_SUCCESS;
