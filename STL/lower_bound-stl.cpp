@@ -9,7 +9,6 @@ int main(void) {
     unsigned int number_queries;
     unsigned int element;
     bool present = false;
-    unsigned int index;
     cin >> number_elements;
     vector <unsigned int> elements;
     for (int i = 0; i < number_elements; i++) {
@@ -21,15 +20,14 @@ int main(void) {
     std::vector<unsigned int>::iterator low;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
-        for (int j = 0; j < number_elements && !present; j++) {
+        for (int j = 0; j < number_elements; j++) {
             if (elements.at(j) == element) {
                 present = true;
-                index = j;
+                cout << "Yes " << j+1 << endl;
+                break;
             }
         }
-        if (present) {
-            cout << "Yes " << index+1 << endl;
-        } else {
+        if (!present) {
             low = lower_bound(elements.begin(), elements.end(), element);
             cout << "No " << low - elements.begin()+1 << endl;
         }
