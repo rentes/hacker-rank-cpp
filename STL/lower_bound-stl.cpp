@@ -20,7 +20,7 @@ int main(void) {
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
         it = find(elements.begin(), elements.end(), element);
-        if (it != elements.end() || *it == element) {
+        if (it != elements.end()) {
             cout << "Yes " << it - elements.begin() + 1 << endl;
         }
         else {
