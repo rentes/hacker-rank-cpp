@@ -8,15 +8,15 @@ int main(void) {
     unsigned int number_elements;
     unsigned int number_queries;
     unsigned int element;
-    cin >> number_elements;
     vector <unsigned int> elements;
+    vector<unsigned int>::iterator it;
+    cin >> number_elements;
     for (int i = 0; i < number_elements; i++) {
         if (cin >> element) {
             elements.push_back(element);
         }
     }
     cin >> number_queries;
-    std::vector<unsigned int>::iterator it;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
         it = find(elements.begin(), elements.end(), element);
