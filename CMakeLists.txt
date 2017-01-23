@@ -3,6 +3,6 @@ project(hacker_rank_cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES STL/lower_bound-stl.cpp)
+set(SOURCE_FILES STL/sets-STL.cpp)
 
 add_executable(hacker_rank_cpp ${SOURCE_FILES})
