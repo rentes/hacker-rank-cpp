@@ -9,5 +9,6 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <set>
 using namespace std;
 #endif //HACKER_RANK_CPP_STL_H
