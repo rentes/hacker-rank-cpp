@@ -26,7 +26,6 @@ int main(void) {
                 } else {
                     cout << "No" << endl;
                 }
-            default: break;
         }
     }
     return EXIT_SUCCESS;
