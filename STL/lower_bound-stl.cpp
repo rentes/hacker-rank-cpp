@@ -19,12 +19,11 @@ int main(void) {
     cin >> number_queries;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
-        it = find(elements.begin(), elements.end(), element);
-        if (it != elements.end()) {
+        it = lower_bound(elements.begin(), elements.end(), element);
+        if (elements.begin() != elements.end() && !(element<*elements.begin()) && element == *it) {
             cout << "Yes " << it - elements.begin() + 1 << endl;
         }
         else {
-            it = lower_bound(elements.begin(), elements.end(), element);
             cout << "No " << it - elements.begin() + 1 << endl;
         }
     }
