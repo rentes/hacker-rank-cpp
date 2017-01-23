@@ -19,6 +19,7 @@ int main(void) {
     cin >> number_queries;
     for (int i = 0; i < number_queries; i++) {
         cin >> element;
+        // binary search - see http://www.cplusplus.com/reference/algorithm/binary_search/
         it = lower_bound(elements.begin(), elements.end(), element);
         if (elements.begin() != elements.end() && !(element<*elements.begin()) && element == *it) {
             cout << "Yes " << it - elements.begin() + 1 << endl;
