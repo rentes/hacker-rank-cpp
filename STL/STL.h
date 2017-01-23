@@ -10,5 +10,6 @@
 #include <iostream>
 #include <algorithm>
 #include <set>
+#include <map>
 using namespace std;
 #endif //HACKER_RANK_CPP_STL_H
