@@ -21,10 +21,18 @@ int main(void) {
         // width is 15 minus the number of digits of B
         // because 1 character is for the '.', and 2 for the decimal places
         // so the width is 15 - 1 - 2 = 12 minus the number of digits of B
-        cout << fixed << setprecision(2) << setfill('_') << setw(12-((int) std::log10(B)+1));
+        unsigned int number_of_digits = 0;
+        unsigned int number = B;
+        do {
+            ++number_of_digits;
+            number /= 10;
+        } while (number);
+        cout << fixed << setprecision(2) << setfill('_') << setw(12-number_of_digits);
         if (B > 0)
-             cout << "+" << B << endl;
+            cout << "+" << B << endl;
         else cout << "-" << B << endl;
+        // pretty printing C
+        cout << scientific << setprecision(9) << C << endl;
     }
 
     return EXIT_SUCCESS;
