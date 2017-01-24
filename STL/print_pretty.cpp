@@ -16,8 +16,7 @@ int main(void) {
         double C;
         cin >> C;
         // pretty printing A
-        int truncA = (int) A;
-        cout << "0x" << hex << truncA << endl;
+        cout << "0x" << hex << (int) A << endl;
     }
 
     return EXIT_SUCCESS;
