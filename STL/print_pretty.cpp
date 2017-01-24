@@ -16,7 +16,7 @@ int main(void) {
         double C;
         cin >> C;
         // pretty printing A
-        cout << "0x" << hex << (int) A << endl;
+        cout << setw(2) << "0x" << setw(13) << left << hex << (int) A << endl;
         // pretty printing B
         // width is 15 minus the number of digits of B
         // because 1 character is for the '.', and 2 for the decimal places
