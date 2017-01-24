@@ -15,7 +15,11 @@ int main(void) {
         cin >> B;
         double C;
         cin >> C;
+        // pretty printing A
+        int truncA = (int) A;
+        cout << "0x" << hex << truncA << endl;
     }
+
     return EXIT_SUCCESS;
 }
 
