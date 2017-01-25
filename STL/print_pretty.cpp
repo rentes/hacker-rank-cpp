@@ -22,7 +22,8 @@ int main(void) {
         // because 1 character is for the '.', and 2 for the decimal places
         // so the width is 15 - 1 - 2 = 12 minus the number of digits of B
         unsigned int number_of_digits = 0;
-        int number = (int) trunc(B);
+        double dx = B < 0.0 ? -0.5 : 0.5;
+        int number = static_cast<int>(B + dx);
         if (number < 0)
             number = -number;
         do {
