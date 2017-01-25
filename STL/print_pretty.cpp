@@ -22,15 +22,17 @@ int main(void) {
         // because 1 character is for the '.', and 2 for the decimal places
         // so the width is 15 - 1 - 2 = 12 minus the number of digits of B
         unsigned int number_of_digits = 0;
-        unsigned int number = B;
+        int number = (int) trunc(B);
+        if (number < 0)
+            number = -number;
         do {
             ++number_of_digits;
             number /= 10;
         } while (number);
-        cout << fixed << setprecision(2) << setfill('_') << setw(12-number_of_digits);
+        cout << fixed << setfill('_') << setw(12-number_of_digits);
         if (B > 0)
-            cout << "+" << B << endl;
-        else cout << "-" << B << endl;
+            cout << right << "+" << setprecision(2) <<  B << endl;
+        else cout << right << "-" << setprecision(2) << B << endl;
         // pretty printing C
         cout << scientific << setprecision(9) << C << endl;
     }
