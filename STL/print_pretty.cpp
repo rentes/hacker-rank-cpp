@@ -33,7 +33,7 @@ int main(void) {
         cout << fixed << setfill('_') << setw(12-number_of_digits);
         if (B > 0)
             cout << right << "+" << setprecision(2) <<  B << endl;
-        else cout << right << "-" << setprecision(2) << B << endl;
+        else cout << right << "" << setprecision(2) << B << endl;
         // pretty printing C
         cout << scientific << setprecision(9) << C << endl;
     }
