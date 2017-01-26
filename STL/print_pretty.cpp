@@ -30,10 +30,14 @@ int main(void) {
             ++number_of_digits;
             number /= 10;
         } while (number);
-        cout << fixed << setfill('_') << setw(12-number_of_digits);
-        if (B > 0)
+        if (B > 0) {
+            cout << fixed << setfill('_') << setw(12-number_of_digits);
             cout << right << "+" << setprecision(2) <<  B << endl;
-        else cout << right << "" << setprecision(2) << B << endl;
+        }
+        else {
+            cout << fixed << setfill('_') << setw(11-number_of_digits);
+            cout << right << "" << setprecision(2) << B << endl;
+        }
         // pretty printing C
         cout << scientific << setprecision(9) << C << endl;
     }
