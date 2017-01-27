@@ -16,30 +16,11 @@ int main(void) {
         double C;
         cin >> C;
         // pretty printing A
-        cout << setw(2) << "0x" << setw(13) << left << hex << (int) A << endl;
+        printf("0x%x\n", (int) A);
         // pretty printing B
-        // width is 15 minus the number of digits of B
-        // because 1 character is for the '.', and 2 for the decimal places
-        // so the width is 15 - 1 - 2 = 12 minus the number of digits of B
-        unsigned int number_of_digits = 0;
-        double dx = B < 0.0 ? -0.5 : 0.5;
-        int number = static_cast<int>(B + dx);
-        if (number < 0)
-            number = -number;
-        do {
-            ++number_of_digits;
-            number /= 10;
-        } while (number);
-        if (B > 0) {
-            cout << fixed << setfill('_') << setw(12-number_of_digits);
-            cout << right << "+" << setprecision(2) <<  B << endl;
-        }
-        else {
-            cout << fixed << setfill('_') << setw(11-number_of_digits);
-            cout << right << "" << setprecision(2) << B << endl;
-        }
+        cout << fixed << setfill('_') << right << showpos << setprecision(2) <<  B << endl;
         // pretty printing C
-        cout << scientific << setprecision(9) << C << endl;
+        cout << scientific << noshowpos << setprecision(9) << C << endl;
     }
 
     return EXIT_SUCCESS;
