@@ -16,11 +16,13 @@ int main(void) {
         double C;
         cin >> C;
         // pretty printing A
-        printf("0x%x\n", (int) A);
+        cout.unsetf(ios::uppercase);
+        cout << left << hex << showbase << (int) A << endl;
+        cout << setiosflags(ios::uppercase);
         // pretty printing B
-        cout << fixed << setfill('_') << right << showpos << setprecision(2) <<  B << endl;
+        cout << fixed << setfill('_') << setw(0xf) << right << showpos << noshowbase << setprecision(2) << B << endl;
         // pretty printing C
-        cout << scientific << noshowpos << setprecision(9) << C << endl;
+        cout << scientific << noshowpos << noshowbase << setprecision(9) << C << endl;
     }
 
     return EXIT_SUCCESS;
