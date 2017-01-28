@@ -17,7 +17,7 @@ int main(void) {
         cin >> C;
         // pretty printing A
         cout.unsetf(ios::uppercase);
-        cout << left << hex << showbase << (int) A << endl;
+        cout << left << hex << showbase << (long int) A << endl;
         cout << setiosflags(ios::uppercase);
         // pretty printing B
         cout << fixed << setfill('_') << setw(0xf) << right << showpos << noshowbase << setprecision(2) << B << endl;
