@@ -12,5 +12,6 @@
 #include <set>
 #include <map>
 #include <iomanip>
+#include <deque>
 using namespace std;
 #endif //HACKER_RANK_CPP_STL_H
