@@ -5,15 +5,10 @@
 #include "STL.h"
 
 void printKMax(int arr[], int n, int k) {
-// Sample input
-//    2
-//    5 2
-//    3 4 6 3 4
-//    7 4
-//    3 4 5 8 1 4 10
-// Sample Output
-//    4 6 6 4
-//    8 8 8 10
+    // for each sub-array of k-elements from arr:
+    // push the lesser element into the front of the deque
+    // and the greater element into the back of the deque
+    // then perform a comparison on the elements at the back of the deque
 }
 
 int main(void) {
