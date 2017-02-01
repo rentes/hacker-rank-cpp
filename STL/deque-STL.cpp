@@ -9,6 +9,7 @@ void printKMax(int arr[], int n, int k) {
     // push the lesser element into the front of the deque
     // and the greater element into the back of the deque
     // then perform a comparison on the elements at the back of the deque
+    // return the greatest element found for each sub-array of k-elements
 }
 
 int main(void) {
