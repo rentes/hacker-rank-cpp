@@ -23,6 +23,7 @@ void printKMax(int arr[], int n, int k) {
         cout << greatest << " ";
         greatest = 0;
     }
+    cout << endl;
 }
 
 int main(void) {
