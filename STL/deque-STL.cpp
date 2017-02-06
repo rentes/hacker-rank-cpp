@@ -6,25 +6,33 @@
 
 void printKMax(int arr[], int n, int k) {
     deque<int> mydeque;
+    std::deque<int>::iterator it;
     int greatest = 0;
-    int pop = 0;
-
-    for (int i = 0; i < n;) {
-        mydeque.push_back(arr[i]);
-        int value_back = mydeque.back();
-        if (value_back > greatest)
-            greatest = value_back;
-        mydeque.pop_back();
-        pop++;
-        if (pop % k == 0) {
-            cout << greatest << " ";
-            greatest = 0;
-            i=i-k+2;
-            pop = 0;
-        }
-        else i++;
+    int value = 0;
+    int index = k;
+    // for each group of k-elements:
+    // push it to the deque
+    // iterate over it and find the greatest value
+    for (int i = 0; i < k; i++) {
+        mydeque.push_front(arr[i]);
+        value = mydeque.front();
+        if (value > greatest)
+            greatest = value;
     }
-    cout << endl;
+    // on the next iterations, push only one more value
+    // and iterate again over the first k-elements on the deque
+    while (index <= n) {
+        mydeque.push_front(++index);
+        it = mydeque.begin();
+        for (int i = 0; i < k; i++) {
+            value = *it++;
+            if (value > greatest)
+                greatest = value;
+        }
+    }
+
+    while (mydeque.size() > 0)
+        mydeque.pop_front();
 }
 
 int main(void) {
