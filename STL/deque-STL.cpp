@@ -17,6 +17,7 @@ void printKMax(int arr[], int n, int k) {
     // on each k-elements
     // to the back of the deque
 
+    // cleaning the deque
     while (mydeque.size() > 0)
         mydeque.pop_front();
     cout << endl;
