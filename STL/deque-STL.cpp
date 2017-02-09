@@ -11,7 +11,7 @@ void printKMax(int arr[], int n, int k) {
     int index = 0;
     int iteration = 0;
     // pushing all values to the deque
-    for (int i = 0; i < n; i++) {
+    for (int i = n-1; i >= 0; i--) {
         mydeque.push_front(arr[i]);
     }
     // pushing all the greatest values
@@ -23,7 +23,7 @@ void printKMax(int arr[], int n, int k) {
             if (value > greatest)
                 greatest = value;
             if (index == k - 1) {
-                mydeque.push_back(greatest);
+                cout << greatest << " ";
                 greatest = 0;
                 index = 0;
                 iteration++;
@@ -34,16 +34,6 @@ void printKMax(int arr[], int n, int k) {
             }
         }
     }
-
-    for (int i = 0; i < n-k+1; i++) {
-        cout << mydeque.back() << " ";
-        mydeque.pop_back();
-    }
-    cout << endl;
-
-    // cleaning the deque
-    while (mydeque.size() > 0)
-        mydeque.pop_front();
     cout << endl;
 }
 
