@@ -29,8 +29,8 @@ void printKMax(int arr[], int n, int k) {
             }
         }
     }
-    // poping the greatest values
-    // from the back of the deque
+    // popping the greatest values from the back of the deque
+    // this will print the greatest values in order
     while(mydeque.size() > 0) {
         cout << mydeque.back() << " ";
         mydeque.pop_back();
