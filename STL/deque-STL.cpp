@@ -31,10 +31,10 @@ void printKMax(int arr[], int n, int k) {
      * pop-ing the greatest values from the back of the deque
      */
     while(mydeque.size() > 0) {
-        cout << mydeque.back() << " ";
+        printf("%d ", mydeque.back());
         mydeque.pop_back();
     }
-    cout << endl;
+    printf("\n");
 }
 
 int main(void) {
