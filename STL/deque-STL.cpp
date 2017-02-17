@@ -10,7 +10,7 @@ void printKMax(int arr[], int n, int k) {
     /*
      * pushing all the greatest values on each k-elements to the front of the deque
      */
-    for (int i = 0; i < n; ) {
+    for (int i = 0; i < n; i++) {
         if (index < k) {
             value = arr[i];
             if (value > greatest)
@@ -20,10 +20,9 @@ void printKMax(int arr[], int n, int k) {
                 greatest = 0;
                 index = 0;
                 iteration++;
-                i = iteration;
+                i = iteration-1;
             } else {
                 index++;
-                i++;
             }
         }
     }
