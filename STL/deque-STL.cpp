@@ -21,9 +21,7 @@ void printKMax(int arr[], int n, int k) {
                 index = 0;
                 iteration++;
                 i = iteration-1;
-            } else {
-                index++;
-            }
+            } else index++;
         }
     }
     /*
