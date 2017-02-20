@@ -20,6 +20,7 @@ void printKMax(int arr[], int n, int k) {
     }
     // calculating the max value on each group of k-elements
     // and placing the max value on the back of the deque
+    // ... to be continued
     while(mydeque.size() > 0) {
         printf("%d ", mydeque.back());
         mydeque.pop_back();
