@@ -6,44 +6,29 @@
 
 void printKMax(int arr[], int n, int k) {
     deque<int> mydeque;
-    int index = 0, iteration = 0, value = 0, greatest = 0;
-    // pushing all the values on each k-elements to the front of the deque
+    int greatest = 0, value = 0, index = 0, iteration = 0;
+    /*
+     * pushing all the greatest values on each k-elements to the front of the deque
+     */
     for (int i = 0; i < n; i++) {
-        if (iteration == n-k+1)
-            break;
         if (index < k) {
-            mydeque.push_front(arr[i]);
-            if (index == k - 1) {
-                index = 0;
-                iteration++;
-                i = iteration-1;
-            } else index++;
-        }
-    }
-    index = 0;
-    iteration = 0;
-    // calculating the max value on each group of k-elements
-    // and placing the max value on the back of the deque
-    // and then print these values as they are the greatest found
-    // ... to be continued
-    for (int i= 0; i < n; i++) {
-        if (iteration == n-k+1)
-            break;
-        if (index < k) {
-            value = mydeque.front();
-            mydeque.pop_front();
-            if (value > greatest) {
+            value = arr[i];
+            if (value > greatest)
                 greatest = value;
-            }
             if (index == k - 1) {
-                mydeque.push_back(greatest);
-                index = 0;
+                mydeque.push_front(greatest);
                 greatest = 0;
+                index = 0;
                 iteration++;
                 i = iteration-1;
-            } else index++;
+            } else {
+                index++;
+            }
         }
     }
+    /*
+     * pop-ing the greatest values from the back of the deque
+     */
     while(mydeque.size() > 0) {
         printf("%d ", mydeque.back());
         mydeque.pop_back();
