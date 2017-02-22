@@ -9,12 +9,14 @@ void printKMax(int arr[], int n, int k) {
     int index = 0, iteration = 0;
     // pushing all the values on each k-elements to the front of the deque
     for (int i = 0; i < n; i++) {
+        if (iteration == n-k+1)
+            break;
         if (index < k) {
             mydeque.push_front(arr[i]);
             if (index == k - 1) {
                 index = 0;
                 iteration++;
-                i = iteration--;
+                i = iteration-1;
             } else index++;
         }
     }
