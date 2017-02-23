@@ -6,7 +6,10 @@
 
 void printKMax(int arr[], int n, int k) {
     deque<int> mydeque;
-    int greatest = 0, value = 0, index = 0, iteration = 0;
+    int greatest = 0;
+    int value = 0;
+    int index = 0;
+    int iteration = 0;
     /*
      * pushing all the greatest values on each k-elements to the front of the deque
      */
