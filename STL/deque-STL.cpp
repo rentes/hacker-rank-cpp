@@ -10,9 +10,7 @@ void printKMax(int arr[], int n, int k) {
     int value = 0;
     int index = 0;
     int iteration = 0;
-    /*
-     * pushing all the greatest values on each k-elements to the front of the deque
-     */
+    //pushing all the greatest values on each k-elements to the front of the deque
     for (int i = 0; i < n; i++) {
         if (index < k) {
             value = arr[i];
@@ -29,9 +27,7 @@ void printKMax(int arr[], int n, int k) {
             }
         }
     }
-    /*
-     * printing the greatest values found
-     */
+    // printing the greatest values found
     std::deque<int>::iterator it = mydeque.begin();
     while (it != mydeque.end())
         std::cout << *it++ << " ";
