@@ -5,7 +5,6 @@
 #include "STL.h"
 
 void printKMax(int arr[], int n, int k) {
-    // to be continued
 }
 
 int main(void) {
