@@ -7,11 +7,14 @@
 void printKMax(int arr[], int n, int k) {
     deque<int> mydeque;
     for (int i = 0; i < n; i++) {
+        // clean the deque if the new array element is greater
+        // than the ones on the deque
         for (; !mydeque.empty() && arr[i] > mydeque.back();)
             mydeque.pop_back();
         mydeque.push_back(arr[i]);
         if (i >= k && mydeque.front() == arr[i-k])
             mydeque.pop_front();
+        // at the end of the k-elements
         if (i >= k-1)
             printf (i < n-1 ? "%d " : "%d\n", mydeque.front());
     }
