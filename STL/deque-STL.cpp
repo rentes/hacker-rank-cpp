@@ -12,6 +12,9 @@ void printKMax(int arr[], int n, int k) {
         for (; !mydeque.empty() && arr[i] > mydeque.back();)
             mydeque.pop_back();
         mydeque.push_back(arr[i]);
+        // at another set of k-elements
+        // pop out the elements if they are the same as the ones
+        // previously read
         if (i >= k && mydeque.front() == arr[i-k])
             mydeque.pop_front();
         // at the end of the k-elements
