@@ -6,5 +6,7 @@
 #define HACKER_RANK_CPP_STRINGS_H
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <vector>
 using namespace std;
 #endif //HACKER_RANK_CPP_STRINGS_H
