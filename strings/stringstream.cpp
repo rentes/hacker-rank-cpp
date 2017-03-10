@@ -6,7 +6,17 @@
 
 
 vector<int> parseInts(string str) {
-    // Complete this function
+    stringstream ss(str);
+    vector<int> integers;
+    int a;
+    char ch;
+
+    do {
+        ch = '\0';
+        ss >> a >> ch;
+        integers.push_back(a);
+    } while (ch == ',');
+    return integers;
 }
 
 int main() {
