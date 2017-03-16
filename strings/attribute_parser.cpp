@@ -59,9 +59,9 @@ int main(void) {
 
     for(int i = 0; i < q; i++) {
         if (m.find(quer[i]) == m.end())
-            cout << "Not Found!\n";
+            cout << "Not Found!" << endl;
         else
-            cout<<m[quer[i]]<<endl;
+            cout << m[quer[i]] << endl;
     }
     return EXIT_SUCCESS;
 }
