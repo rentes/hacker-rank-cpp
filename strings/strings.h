@@ -11,6 +11,6 @@
 #include <cmath>
 #include <cstdio>
 #include <algorithm>
-
+#include <map>
 using namespace std;
 #endif //HACKER_RANK_CPP_STRINGS_H
