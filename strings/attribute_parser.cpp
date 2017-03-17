@@ -10,7 +10,7 @@ int main(void) {
 
     string temp;
     vector<string> hrml;
-    vector<string> quer;
+    vector<string> queries;
     cin.ignore();
 
     for(int i = 0; i < n; i++) {
@@ -20,18 +20,18 @@ int main(void) {
 
     for(int i = 0; i < q; i++) {
         getline(cin, temp);
-        quer.push_back(temp);
+        queries.push_back(temp);
     }
 
     map<string, string> m;
     vector<string> tag;
 
     for(int i = 0; i < n; i++) {
-        temp=hrml[i];
+        temp = hrml[i];
         temp.erase(remove(temp.begin(), temp.end(), '\"'), temp.end());
         temp.erase(remove(temp.begin(), temp.end(), '>'), temp.end());
 
-        if(temp.substr(0,2) == "</") {
+        if(temp.substr(0, 2) == "</") {
             tag.pop_back();
         }
         else {
@@ -58,10 +58,11 @@ int main(void) {
     }
 
     for(int i = 0; i < q; i++) {
-        if (m.find(quer[i]) == m.end())
+        if (m.find(queries[i]) == m.end())
             cout << "Not Found!" << endl;
         else
-            cout << m[quer[i]] << endl;
+            cout << m[queries[i]] << endl;
     }
+
     return EXIT_SUCCESS;
 }
