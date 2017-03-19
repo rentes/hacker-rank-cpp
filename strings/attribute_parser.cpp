@@ -6,11 +6,10 @@
 
 int main(void) {
     unsigned int n, q;
-    cin >> n >> q;
-
     string temp;
     vector<string> hrml;
     vector<string> queries;
+    cin >> n >> q;
     cin.ignore();
 
     for(int i = 0; i < n; i++) {
