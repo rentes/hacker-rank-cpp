@@ -9,21 +9,22 @@ int main(void) {
     string temp;
     vector<string> hrml;
     vector<string> queries;
+    map<string, string> m;
+    vector<string> tag;
     cin >> n >> q;
     cin.ignore();
 
+    // inserts HRML input into hrml vector
     for(int i = 0; i < n; i++) {
         getline(cin, temp);
         hrml.push_back(temp);
     }
 
+    // inserts queries input into queries vector
     for(int i = 0; i < q; i++) {
         getline(cin, temp);
         queries.push_back(temp);
     }
-
-    map<string, string> m;
-    vector<string> tag;
 
     for(int i = 0; i < n; i++) {
         temp = hrml[i];
