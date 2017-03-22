@@ -3,6 +3,6 @@ project(hacker_rank_cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES strings/attribute_parser.cpp strings/strings.h)
+set(SOURCE_FILES classes/structs.cpp classes/classes.h)
 
 add_executable(hacker_rank_cpp ${SOURCE_FILES})
